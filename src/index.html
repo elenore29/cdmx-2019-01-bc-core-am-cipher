@@ -5,12 +5,58 @@
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div id="root">
-      <h1>Hola mundo!</h1>
-      <p> Probando cambios </p>
-      <P> Este es un segundo cambio </p>
-    </div>
+    <!-- Aquí comienza el cuerpo de la página -->
+    <!-- Contenedores de la página -->
+    <div id="all">
+    <div id="todo">
+  <div id="contenedor">
+    <div class="divide"> </div>
+    <!-- Pantalla -->
+
+    <div id="pantalla">
+      <!-- Pantalla 1 -->
+
+      <div id="pantalla1">
+      <h1> Generador de contraseñas </h1>
+      <br>
+      <p> ¡Introduce una pista para cifrar o desifrar tu contraseña! </p>
+      <br>
+      <input id="mensaje" type="text" placeholder="Pista">
+  <br>
+  <br>
+  <p> Introduce un numero de cifrado <input id="opcion" type="number" placeholder="Número"> </p>
+  </div>
+
+  <!-- Pantalla 2 -->
+  <div class="hide" id="pantalla2">  <h1> Generador de contraseñas </h1> <br> <p> ¡Aquí esta tu nueva contraseña!</p> <br> <p id="msjcifrado"> </p>
+  </div>
+
+  <!-- Pantalla 3-->
+  <div class="hide" id="pantalla3">  <h1> Generador de contraseñas </h1> <br> <p> ¡Esta es la pista que usaste para crear tu contraseña!</p> <br> <p id="msjdescifrado"> HOLA</p>
+  </div>
+  </div>
+
+    <div class="divide"> </div>
+
+
+    <!-- Control con 3 botones -->
+
+  <div id="control">
+
+    <!-- Boton cifrado azul -->
+    <input id="azul" type="button" value="Cifrar">
+
+    <!-- Boton cifrado morado -->
+  <input id="morado" type="button" value="Otra vez">
+
+  <!-- Boton de re inicio verde -->
+  <input id="verde" type="button" value="Descifrar">
+  </div>
+  </div>
+  </div>
+  </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
