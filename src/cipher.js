@@ -1,8 +1,8 @@
 // Se declara la variable nuevoCifrado de forma global y se inicializa como una string vacía
-let nuevoCifrado="";
 window.cipher = {
 //Se crea la función encode
 encode: (offset, str)=>{
+  let nuevoCifrado="";
   //La variable offset se convierte en numero entero
   let offsetNuevo = parseInt(offset);
   let mayuscula= str.toUpperCase();
@@ -19,6 +19,7 @@ el largo del String*/
     return (nuevoCifrado);
 },
   decode: (offset, str)=>{
+    let nuevoCifrado="";
     let offsetNuevo = parseInt(offset)
     let mayuscula = str.toUpperCase();
 
@@ -28,7 +29,6 @@ el largo del String*/
           let resultado = String.fromCharCode(formula);
           nuevoCifrado+=resultado;
       }
-      console.log(nuevoCifrado)
       return (nuevoCifrado);
     }
 };
