@@ -12,9 +12,16 @@ se inicializa i en 0 y va aumentando una posicion conforme aumente
 el largo del String*/
     for(let i=0; i<mayuscula.length; i++){
         let letraAscii = mayuscula.charCodeAt(i);
-        let formula = (letraAscii-65+offsetNuevo)%26+65;
-        let resultado = String.fromCharCode(formula);
-        nuevoCifrado+=resultado;
+          if (letraAscii == 32){
+            let resultado = String.fromCharCode(letraAscii);
+            nuevoCifrado+=resultado;
+          }
+          else {
+            let formula = (letraAscii-65+offsetNuevo)%26+65;
+            let resultado = String.fromCharCode(formula);
+            nuevoCifrado+=resultado;
+          }
+
     }
     return (nuevoCifrado);
 },
@@ -25,9 +32,16 @@ el largo del String*/
 
       for(let i=0; i<mayuscula.length; i++){
           let letraAscii = mayuscula.charCodeAt(i);
-          let formula = (letraAscii+65-offsetNuevo)%26+65;
-          let resultado = String.fromCharCode(formula);
-          nuevoCifrado+=resultado;
+            if (letraAscii == 32){
+              let resultado = String.fromCharCode(letraAscii);
+              nuevoCifrado+=resultado;
+          }
+          else {
+            let formula = (letraAscii+65-offsetNuevo)%26+65;
+            let resultado = String.fromCharCode(formula);
+            nuevoCifrado+=resultado;
+          }
+
       }
       return (nuevoCifrado);
     }

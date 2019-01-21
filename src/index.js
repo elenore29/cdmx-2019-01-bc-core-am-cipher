@@ -1,6 +1,7 @@
 const pantalla1 = document.getElementById('pantalla1');
 const pantalla2= document.getElementById('pantalla2');
 const pantalla3 = document.getElementById('pantalla3');
+
 const codificar = document.getElementById('azul');
 const morado = document.getElementById('morado');
 const decodificar = document.getElementById('verde');
@@ -24,6 +25,7 @@ codificar.addEventListener('click',()=> {
 });
 
  morado.addEventListener('click',()=> {
+  location.reload(true);
   pantalla3.classList.add('hide');
   pantalla2.classList.add('hide');
   pantalla1.classList.remove('hide');
