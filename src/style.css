@@ -5,11 +5,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
 
+#inicio{
+  width: 100%;
+  height: 100vh;
+  background-color: purple;
+  padding-top: 100px;
 }
 
 #all {
-  overflow: scroll;
+  overflow: auto;
   background-image: url(https://k33.kn3.net/taringa/0/0/B/9/1/1/Thom2208/983.jpg);
   width: 100%;
   height: 100vh;
@@ -19,10 +25,11 @@
 }
 
 #todo {
-  overflow: scroll;
   background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
-  height: 100vh;
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
 #contenedor {
@@ -119,7 +126,6 @@ h1 {
   font-size: 12px;
   margin-left: 166px;
   font-family: 'McLaren', cursive;
-
 }
 
 #azul:hover{

@@ -48,7 +48,7 @@ for(let i=0; i<str.length; i++){
           }
 
           else if (letraAscii >=97 && letraAscii<=122) {
-            let formula = (letraAscii+97+offsetNuevo)%26+97;
+            let formula = (letraAscii-122-offsetNuevo)%26+122;
             let resultado = String.fromCharCode(formula);
             nuevoCifrado+=resultado;
           }

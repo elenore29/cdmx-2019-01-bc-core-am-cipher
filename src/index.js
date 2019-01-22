@@ -12,8 +12,6 @@ const str1 = document.getElementById("mensaje");
 mediante su id, definiendose la variable offset */
 let offset1 = document.getElementById("opcion");
 
-
-
 codificar.addEventListener('click',()=> {
   let offset=offset1.value;
   let str=str1.value;
