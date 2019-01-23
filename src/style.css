@@ -107,6 +107,14 @@ p {
   background-color: rgba(236, 29, 35, 0);
 }
 
+#instruccion {
+  color: white;
+  text-align: center;
+  font-family: 'McLaren', cursive;
+  font-size: 15px;
+  background-color: rgba(236, 29, 35, 0);
+}
+
 #msjcifrado,
 #msjdescifrado {
   color: white;
