@@ -7,11 +7,53 @@
   padding: 0;
 }
 
-#inicio{
+#inicio {
+  overflow: hidden;
   width: 100%;
   height: 100vh;
-  background-color: purple;
+  background-image: url(https://k33.kn3.net/taringa/0/0/B/9/1/1/Thom2208/983.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   padding-top: 100px;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  font-family: 'McLaren', cursive;
+  font-size: 25px;
+  background-color: rgba(236, 29, 35, 0);
+}
+
+#boton {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+#comenzar {
+  width: 200px;
+  height: 200px;
+  color: white;
+  font-family: 'McLaren', cursive;
+  font-size: 24px;
+  border: 0;
+  border-radius: 100px;
+  box-shadow: 0px 10px #000000;
+  background-color: #064AA9;
+}
+
+#comenzar:hover {
+  background-color: #164192;
+}
+
+#bienvenida {
+  padding: 30px;
+  width: 700px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin: 0 auto;
 }
 
 #all {
@@ -19,8 +61,8 @@
   background-image: url(https://k33.kn3.net/taringa/0/0/B/9/1/1/Thom2208/983.jpg);
   width: 100%;
   height: 100vh;
-	background-size: cover;
-	background-repeat: repeat;
+  background-size: cover;
+  background-repeat: repeat;
   background-attachment: fixed;
 }
 
@@ -36,22 +78,22 @@
   overflow: hidden;
   margin: 0 auto;
   width: 700px;
-
 }
 
 #pantalla {
   background-image: url(http://i67.tinypic.com/14uxbbp.jpg);
   background-repeat: no-repeat;
   width: 700px;
-  }
+}
 
-#pantalla1, #pantalla2, #pantalla3 {
+#pantalla1,
+#pantalla2,
+#pantalla3 {
   width: 700px;
   height: 415px;
   padding: 50px;
   background-color: rgba(236, 29, 35, 0);
 }
-
 
 .hide {
   display: none;
@@ -65,7 +107,8 @@ p {
   background-color: rgba(236, 29, 35, 0);
 }
 
-#msjcifrado, #msjdescifrado {
+#msjcifrado,
+#msjdescifrado {
   color: white;
   text-align: center;
   font-family: 'McLaren', cursive;
@@ -90,7 +133,8 @@ h1 {
   margin-left: 75px;
   width: 450px;
   height: 40px;
-  font-family: 'McLaren', cursive;  font-size: 14px;
+  font-family: 'McLaren', cursive;
+  font-size: 14px;
   padding-left: 15px;
   background-color: black;
   color: white;
@@ -100,7 +144,8 @@ h1 {
 #opcion {
   width: 100px;
   height: 40px;
-  font-family: 'McLaren', cursive;  font-size: 14px;
+  font-family: 'McLaren', cursive;
+  font-size: 14px;
   background-color: black;
   color: white;
   text-align: center;
@@ -128,10 +173,10 @@ h1 {
   font-family: 'McLaren', cursive;
 }
 
-#azul:hover{
+#azul:hover {
   background-image: url(http://i63.tinypic.com/2czscxe.jpg);
   background-color: rgba(236, 29, 35, 0);
-  }
+}
 
 #morado {
   position: relative;
@@ -147,10 +192,10 @@ h1 {
   font-family: 'McLaren', cursive;
 }
 
-#morado:hover{
+#morado:hover {
   background-image: url(http://i64.tinypic.com/i5rpkh.jpg);
   background-color: rgba(236, 29, 35, 0);
-  }
+}
 
 #verde {
   position: relative;
@@ -164,14 +209,13 @@ h1 {
   font-size: 12px;
   margin-left: 395px;
   font-family: 'McLaren', cursive;
-
 }
 
-#verde:hover{
+#verde:hover {
   border: 0px;
   background-image: url(http://i63.tinypic.com/2cndz0g.jpg);
   background-color: rgba(236, 29, 35, 0);
-  }
+}
 
 #espacio {
   background-color: rgba(236, 29, 35, 0);

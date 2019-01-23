@@ -1,63 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <!-- Aquí comienza el cuerpo de la página -->
-    <!-- Contenedores de la página -->
-    <div id="all">
+<head>
+  <meta charset="utf-8">
+  <title>Caesar Cipher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Aquí comienza la sección de bienvenida-->
+  <div id="inicio">
+    <div id="bienvenida">
+      <h2>¡Bienvenido al generador de contraseñas! </h2> <br>
+      <p>Aquí puedes crear contraseñas más seguras <br>usando pistas fáciles de recordar</p>
+    </div>
+    <div id="boton"> <a href="#all"> <input id="comenzar" type="button" value="Comenzar"> </a></div>
+  </div>
+  <!-- Aquí comienza la segunda sección -->
+  <!-- Contenedores de la página -->
+  <section id="all">
     <div id="todo">
-  <div id="contenedor">
-    <div class="divide"> </div>
-    <!-- Pantalla -->
+      <div id="contenedor">
+        <div class="divide"> </div>
 
-    <div id="pantalla">
-      <!-- Pantalla 1 -->
+        <!-- Contenedor de la pantalla -->
+        <div id="pantalla">
+          <!-- Pantalla 1 -->
 
-      <div id="pantalla1">
-      <h1> Generador de contraseñas </h1>
-      <br>
-      <p> ¡Introduce una pista para cifrar o descifrar tu contraseña! </p>
-      <br>
-      <input id="mensaje" type="text" placeholder="Pista">
-  <br>
-  <br>
-  <p> Introduce un número <input id="opcion" type="number" placeholder="Número"> </p>
-  </div>
+          <div id="pantalla1">
+            <h1> Generador de contraseñas </h1>
+            <br>
+            <p> ¡Introduce una pista para cifrar o descifrar tu contraseña! </p>
+            <br>
+            <input id="mensaje" type="text" placeholder="Pista">
+            <br>
+            <br>
+            <p> Introduce un número <input id="opcion" type="number" placeholder="Número"> </p>
+          </div>
 
-  <!-- Pantalla 2 -->
-  <div class="hide" id="pantalla2">  <h1> Generador de contraseñas </h1> <br> <p> ¡Aquí esta tu nueva contraseña!</p> <br> <p id="msjcifrado"> </p>
-  </div>
+          <!-- Pantalla 2 -->
+          <div class="hide" id="pantalla2">
+            <h1> Generador de contraseñas </h1> <br>
+            <p> ¡Aquí esta tu nueva contraseña!</p> <br>
+            <p id="msjcifrado"> </p>
+          </div>
 
-  <!-- Pantalla 3-->
-  <div class="hide" id="pantalla3">  <h1> Generador de contraseñas </h1> <br> <p> ¡Esta es la pista que usaste para crear tu contraseña!</p> <br> <p id="msjdescifrado"> HOLA</p>
-  </div>
-  </div>
+          <!-- Pantalla 3-->
+          <div class="hide" id="pantalla3">
+            <h1> Generador de contraseñas </h1> <br>
+            <p> ¡Esta es la pista que usaste para crear tu contraseña!</p> <br>
+            <p id="msjdescifrado"> HOLA</p>
+          </div>
+        </div>
 
-    <div class="divide"> </div>
+        <div class="divide"> </div>
 
+        <!-- Control con 3 botones -->
 
-    <!-- Control con 3 botones -->
+        <div id="control">
 
-  <div id="control">
+          <!-- Boton de cifrado azul -->
+          <input id="azul" type="button" value="Cifrar">
 
-    <!-- Boton cifrado azul -->
-    <input id="azul" type="button" value="Cifrar">
+          <!-- Boton de reinicio morado -->
+          <input id="morado" type="button" value="Otra vez">
 
-    <!-- Boton cifrado morado -->
-  <input id="morado" type="button" value="Otra vez">
+          <!-- Boton de descifrado verde -->
+          <input id="verde" type="button" value="Descifrar">
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="cipher.js"></script>
+  <script src="index.js"></script>
+</body>
 
-  <!-- Boton de re inicio verde -->
-  <input id="verde" type="button" value="Descifrar">
-  </div>
-  </div>
-  </div>
-  </div>
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
-  </body>
 </html>
