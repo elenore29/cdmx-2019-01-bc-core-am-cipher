@@ -1,3 +1,82 @@
+# Generador de contraseñas
+Este proyecto es un generador de contraseñas para gamers, que funciona mediante el cifrado césar.
+
+## UX
+Para conocer los detalles del proceso y decisiones de diseño del proyecto, [ingresa aquí.](https://docs.google.com/presentation/d/1GlEZ8pTAE_ryeu5rlo7lh2WtxRcYF4seLZDC_ngV4Vg/edit?usp=sharing)
+
+## El proyecto está construido con
+- Vanilla JavaScript ES6
+- HTML
+- CSS
+
+### Scripts / Archivos
+src/index.html: Este archivo contiene el markup (HTML) del proyecto.
+src/cipher.js: En este archivo está implementado el objeto cipher el cual está exportado en el objeto global (window) y contiene dos métodos:
+- cipher.encode(offset, str): offset es el número de posiciones que queremos mover a la derecha en el alfabeto y str el mensaje (texto) que queremos cifrar.
+- cipher.decode(offset, str): offset es el número de posiciones que queremos mover a la izquierda en el alfabeto y string el mensaje (texto) que queremos descifrar.
+src/index.js: acá están los eventos del DOM, y se invoca a cipher.encode() y a cipher.decode().
+test/cipher.spec.js: este archivo contiene los tests que se pueden implementar para cipher.encode() y cipher.decode().
+
+## Cómo comenzar a trabajar en el proyecto
+- Antes que nada, asegúrate de tener un  editor de texto en condiciones, algo como Atom, Visual Code, Sublime Text o cualquier otro de tu preferencia.
+- Haz tu propio  fork de este repositorio de tu cohort.
+- Clona tu fork a tu computadora (copia local).
+
+### Pre-requisitos
+Para ejecutar los comandos a continuación necesitarás una  UNIX Shell, que es un programa que interpreta líneas de comando (command-line interpreter) así como tener git instalado. Si usas un sistema operativo "UNIX-like", como GNU/Linux o MacOS, ya tienes una shell (terminal) instalada por defecto (y probablemente git también). Si usas Windows puedes usar Git bash, aunque recomendaría que consideres probar  GNU/Linux como tu Sistema Operativo.
+
+
+### Instalación
+Instala las dependencias del proyecto con el comando npm install. Esto asume que has instalado Node.js (que incluye npm).
+
+##Test
+Si todo ha ido bien, deberías poder ejecutar las  pruebas unitarias (unit tests) con el comando npm run test.
+
+### Pruebas de estilo de codificación
+-chai
+-eslint
+-htmlhint
+-mocha
+-nyc
+-opener
+
+### Sobre los test
+Los test hacen las siguientes comprobaciones:
+
+Cipher
+- Debería ser un objeto
+cipher.encode
+- Debería ser una función
+- Debería retornar "HIJKLMNOPQRSTUVWXYZABCDEFG" para "ABCDEFGHIJKLMNOPQRSTUVWXYZ" con offset 33
+- Debería retornar " !@" para " !@"
+- Debería retornar "hijklmnopqrstuvwxyzabcdefg" para "abcdefghijklmnopqrstuvwxyz" con offset 33
+cipher.decode
+- Debería ser una función
+- Debería retornar "ABCDEFGHIJKLMNOPQRSTUVWXYZ" para "HIJKLMNOPQRSTUVWXYZABCDEFG" con offset 33
+- Debería retornar "abcdefghijklmnopqrstuvwxyz" para "hijklmnopqrstuvwxyzabcdefg" con offset 33
+- Debería retornar " !@" para " !@"
+
+## Contribuciones
+Para contribuir con este repositorio, primero discute el cambio que deseas realizar a través de correo electrónico o cualquier otro método con los propietarios de este repositorio.
+
+## Autor
+Elenore Elisa Espinosa Nava (elenore29)
+
+### Contribuyentes
+- diegovelezg
+- shirley-startary
+- developerVilchez
+- diegovelezg
+- lupomontero
+- gaposx
+
+## Agradecimientos
+Aprovecho esta sección para agradecer a todo el equipo de Laboratoria que hacen posible el desarrollo del Bootcamp. Especialmente a Jonh y Mike que resolvieron mis dudas y dificultades técnicas.
+
+También agradezco a mis compañeras de equipo Lorena, Gabriela, Elizabeth, Paulina, Fabiola, Diana y Elsy que me apoyaron en todo momento durante el desarrollo del proyecto y demostraron un gran espíritu de trabajo en equipo, por lo cual considero que mi proyecto tiene la esencia de cada una de ellas. :)
+
+-----------------------------------------------------------------------------------------------
+
 # Cifrado César
 
 Cifrar significa codificar. El [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher) es uno de los primeros métodos de cifrado conocidos. El emperador romano Julio César lo usaba para enviar órdenes secretas a sus generales en los campos de batalla.
@@ -12,6 +91,7 @@ Por ejemplo, si usamos un desplazamiento (_offset_) de 3 posiciones:
 - La palabra CASA se cifra como FDVD.
 - Alfabeto sin cifrar: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 - Alfabeto cifrado: D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
+Contribuciones
 
 En la actualidad, todos los cifrados de sustitución simple se descifran con mucha facilidad y, aunque en la práctica no ofrecen mucha seguridad en la comunicación por sí mismos; el cifrado César sí puede formar parte de sistemas más complejos de codificación, como el cifrado Vigenère, e incluso tiene aplicación en el sistema ROT13.
 
@@ -208,7 +288,13 @@ para ver la descripción detallada de cada _habilidad_ y cada _nivel_. Esta es u
 ***
 
 ## Pistas sobre cómo comenzar a trabajar en el proyecto
-
+et offset = offset1.value;
+  let str = str1.value;
+  pantalla1.classList.add('hide');
+  pantalla3.classList.add('hide');
+  pantalla2.classList.remove('hide');
+  let resultadoCifrado = window.cipher.encode(offset, str);
+  document.getElementById("msj
 1. Antes que nada, asegúrate de tener un :pencil: editor de texto en
    condiciones, algo como [Atom](https://atom.io/),
    [Visual Code](https://code.visualstudio.com/), [Sublime Text](https://www.sublimetext.com) o cualquier otro de tu preferencia.
@@ -271,23 +357,23 @@ Esta sección está  para ayudarte a llevar un control de lo que vas completando
   el producto.
 * [ ] `README.md` explica claramente cómo el producto soluciona los
   problemas/necesidades de los usuarios.
-* [ ] Usa VanillaJS.
-* [ ] No utiliza `this`.
-* [ ] Implementa `cipher.encode`.
-* [ ] Implementa `cipher.decode`.
-* [ ] Pasa linter con configuración provista.
-* [ ] Pasa pruebas unitarias.
-* [ ] Pruebas unitarias cubren 70% de _statements_, _functions_ y _lines_, y un
+* [x] Usa VanillaJS.
+* [x] No utiliza `this`.
+* [x] Implementa `cipher.encode`.
+* [x] Implementa `cipher.decode`.
+* [x] Pasa linter con configuración provista.
+* [x] Pasa pruebas unitarias.
+* [x] Pruebas unitarias cubren 70% de _statements_, _functions_ y _lines_, y un
   mínimo del 50% de _branches_.
-* [ ] Interfaz permite elegir el `offset` o _desplazamiento_ a usar en el
+* [x] Interfaz permite elegir el `offset` o _desplazamiento_ a usar en el
   cifrado/descifrado.
-* [ ] Interfaz permite escribir un texto para ser cifrado.
-* [ ] Interfaz muestra el resultado del cifrado correctamente.
-* [ ] Interfaz permite escribir un texto para ser descifrado.
-* [ ] Interfaz muestra el resultado del descifrado correctamente.
+* [x] Interfaz permite escribir un texto para ser cifrado.
+* [x] Interfaz muestra el resultado del cifrado correctamente.
+* [x] Interfaz permite escribir un texto para ser descifrado.
+* [x] Interfaz muestra el resultado del descifrado correctamente.
 
 ### Parte Opcional: "Hacker edition"
-* [ ] Cifra/descifra minúsculas
-* [ ] Cifra/descifra _otros_ caracteres (espacios, puntuación, `ñ`, `á`, ...)
+* [x] Cifra/descifra minúsculas
+* [x] Cifra/descifra _otros_ caracteres (espacios, puntuación, `ñ`, `á`, ...)
 * [ ] Permite usar un `offset` negativo.
 * [ ] Modelo de negocio.
