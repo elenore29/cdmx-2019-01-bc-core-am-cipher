@@ -11,10 +11,13 @@ Para conocer los detalles del proceso y decisiones de diseño del proyecto, [ing
 
 ### Scripts / Archivos
 src/index.html: Este archivo contiene el markup (HTML) del proyecto.
+
 src/cipher.js: En este archivo está implementado el objeto cipher el cual está exportado en el objeto global (window) y contiene dos métodos:
 - cipher.encode(offset, str): offset es el número de posiciones que queremos mover a la derecha en el alfabeto y str el mensaje (texto) que queremos cifrar.
 - cipher.decode(offset, str): offset es el número de posiciones que queremos mover a la izquierda en el alfabeto y string el mensaje (texto) que queremos descifrar.
+
 src/index.js: acá están los eventos del DOM, y se invoca a cipher.encode() y a cipher.decode().
+
 test/cipher.spec.js: este archivo contiene los tests que se pueden implementar para cipher.encode() y cipher.decode().
 
 ## Cómo comenzar a trabajar en el proyecto
