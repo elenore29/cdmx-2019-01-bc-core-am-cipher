@@ -32,27 +32,29 @@ Para ejecutar los comandos a continuación necesitarás una  UNIX Shell, que es 
 ### Instalación
 Instala las dependencias del proyecto con el comando npm install. Esto asume que has instalado Node.js (que incluye npm).
 
-##Test
+## Test
 Si todo ha ido bien, deberías poder ejecutar las  pruebas unitarias (unit tests) con el comando npm run test.
 
 ### Pruebas de estilo de codificación
--chai
--eslint
--htmlhint
--mocha
--nyc
--opener
+- chai
+- eslint
+- htmlhint
+- mocha
+- nyc
+- opener
 
 ### Sobre los test
 Los test hacen las siguientes comprobaciones:
 
 Cipher
 - Debería ser un objeto
+
 cipher.encode
 - Debería ser una función
 - Debería retornar "HIJKLMNOPQRSTUVWXYZABCDEFG" para "ABCDEFGHIJKLMNOPQRSTUVWXYZ" con offset 33
 - Debería retornar " !@" para " !@"
 - Debería retornar "hijklmnopqrstuvwxyzabcdefg" para "abcdefghijklmnopqrstuvwxyz" con offset 33
+
 cipher.decode
 - Debería ser una función
 - Debería retornar "ABCDEFGHIJKLMNOPQRSTUVWXYZ" para "HIJKLMNOPQRSTUVWXYZABCDEFG" con offset 33
